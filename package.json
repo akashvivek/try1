@@ -1,0 +1,36 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "main": "server.js",
+  "engines": {
+    "node": "16.15.0",
+    "npm":"8.5.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix froont",
+    "dev": "concurrently \"npm run server\" \"npm run froont\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix froont && npm run build --prefix froont"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.30.1",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16",
+    "react-to-print": "^2.14.7",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
